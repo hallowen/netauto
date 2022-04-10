@@ -1,0 +1,15 @@
+---
+vrfs:
+   - name: CUSTOMER-C
+     rd: 1:1100
+     route_export: 
+     - 1:1100
+     route_import: 
+     - 1:6100
+
+   - name: CUSTOMER-D
+     rd: 1:2100
+     route_export: 
+     - 1:2100
+     route_import: 
+     - 1:7100

@@ -1,0 +1,13 @@
+--- 
+   - name: Getting running configuration from routers
+     hosts: routers
+
+     tasks: 
+     - name: Gathering running configuration
+       ios_command:
+          commands: show running-config
+       register: sh_run
+
+     - name: Printing command output
+       debug:
+          msg: "{{ sh_run }}"

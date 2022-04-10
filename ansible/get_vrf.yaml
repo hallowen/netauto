@@ -1,0 +1,23 @@
+- name: Getting VRF details from devices
+  hosts: pe
+
+  tasks:
+  - name: Getting VRF infromation from running configuration
+    ios_command:
+       commands: show running | sec vrf definition
+    register:
+       vrf_details
+  - name: Printing VRF information
+    debug:
+       var: vrf_details["stdout"][0]
+  - name: Creating backup folder
+    file: 
+       path: ./vrf_op
+       state: directory
+    run_once: true
+
+  - name: Saving output to file
+    copy:
+       content: "{{ vrf_details['stdout'][0] }}"
+       dest: ./vrf_op/{{ inventory_hostname }}.txt
+   

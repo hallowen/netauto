@@ -1,0 +1,19 @@
+vrf definition CUST-A
+ rd 1:6000
+ route-target export 1:6000
+ route-target import 1:1000
+ !
+ address-family ipv4
+ exit-address-family
+vrf definition CUST-B
+ rd 1:7000
+ route-target export 1:7000
+ route-target import 1:2000
+ !
+ address-family ipv4
+ exit-address-family
+vrf definition VRF-MGMT
+ rd 15:15
+ !
+ address-family ipv4
+ exit-address-family

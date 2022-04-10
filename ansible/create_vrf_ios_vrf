@@ -1,0 +1,9 @@
+---
+- name: Creating VRF using IOS_VRF module
+  hosts: pe
+
+  tasks:
+  - name: Creating VRF's on routers
+    ios_vrf:
+       vrfs: "{{ vrfs }}"
+    

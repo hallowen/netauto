@@ -1,0 +1,17 @@
+---
+- name: Creating multiple customers on multiple devices using Ansible and Jinja2
+  hosts: pe
+
+  tasks:
+     - name: Creating VRF's
+       ios_config:
+          src: vpn.j2
+          save_when: changed
+       notify: configuration changed
+       register: create_vrf
+
+  handlers:
+     - name: Printing output only when configuration is changed
+       listen: configuration changed
+       debug: 
+          msg: "{{ create_vrf }}"

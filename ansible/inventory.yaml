@@ -1,0 +1,21 @@
+---
+all:
+   children:
+      network:
+         children:
+            routers:
+               children:
+                  ce:
+                     hosts:
+                        192.168.0.31:
+                        192.168.0.32:
+                        192.168.0.36:
+                        192.168.0.37:
+                  pe:
+                     hosts:
+                        192.168.0.33:
+                        192.168.0.35:
+                  p:
+                     hosts:
+                        192.168.0.34:
+

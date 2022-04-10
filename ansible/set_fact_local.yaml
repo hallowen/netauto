@@ -1,0 +1,13 @@
+---
+- name: Setting facts and applying local filter
+  connection: local
+  hosts: localhost
+
+  tasks:
+  - name: Setting my name using set_fact module
+    set_fact:
+     my_name : Sandeep Suresh
+
+  - name: Displaying in upper case
+    debug:
+       msg: "{{ my_name|upper }}"
