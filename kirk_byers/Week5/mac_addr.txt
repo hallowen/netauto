@@ -1,0 +1,6 @@
+123.234.456
+aabb.ccdd.eeff
+a:b:c:d:e:f
+1:2:a:b:3:44
+a-b-c-d-e-f
+1-2-a-b-3-44
