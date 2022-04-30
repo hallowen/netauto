@@ -1,4 +1,4 @@
-# Deleting a file on remote device using netmiko
+# Setting delay factor globally
 
 from netmiko import Netmiko
 
@@ -7,9 +7,10 @@ device_details = {
     "device_type": "cisco_ios",
     "username": "admin",
     "password": "admin",
+    "global_delay_factor": 2,
 }
 
 conn = Netmiko(**device_details)
-output = conn.send_command_timing("delete bootflash:///filetodelete.txt")
-conn.send_command("y\n")
-print("File successfully deleted")
+output = conn.send_command("copy run start")
+
+print(output)
