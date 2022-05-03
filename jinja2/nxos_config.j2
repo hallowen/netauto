@@ -1,0 +1,28 @@
+feature ospf
+router ospf LAB
+address-family ipv4 unicast
+exit
+feature bgp
+interface loopback {{ lo_num }}
+ip address {{ lo_address }}
+ip router ospf LAB area 0
+exit
+feature bgp
+interface e1/1
+no switchport
+ip address {{ e1_1_ip_address }}
+no shutdown
+ip router ospf LAB area 0
+exit
+router bgp {{ bgp_local_as }}
+  address-family ipv4 unicast
+    network {{ local_subnet01 }}
+  neighbor {{ neighbor_address }}
+    remote-as {{ bgp_remote_as }}
+    update-source {{ update_src }}
+    address-family ipv4 unicast
+    exit
+    exit
+    {% if  address_family_ipv6 %}
+    address-family ipv6 unicast
+    {% endif %}

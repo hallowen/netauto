@@ -1,0 +1,26 @@
+feature ospf
+router ospf LAB
+address-family ipv4 unicast
+exit
+feature bgp
+interface loopback 0
+ip address 1.1.1.1/32
+ip router ospf LAB area 0
+exit
+feature bgp
+interface e1/1
+no switchport
+ip address 192.168.100.1/24
+no shutdown
+ip router ospf LAB area 0
+exit
+router bgp 65000
+  address-family ipv4 unicast
+    network 1.1.1.1/32
+  neighbor 2.2.2.2
+    remote-as 65000
+    update-source loo0
+    address-family ipv4 unicast
+    exit
+    exit
+    
