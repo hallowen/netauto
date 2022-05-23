@@ -1,0 +1,1 @@
+virt-install --name "EVE-NG-Community" --memory 49152 --vcpus 6 --cpu host --cdrom /mnt/DataBank-HDD/ISO-IMAGES/eve-com-v5.iso --os-variant ubuntu20.04 --disk /mnt/DataBank-SSD/VM-IMAGES/eve-ng-community.qcow2 --network bridge=br0 --graphics vnc,port=5901,listen=0.0.0.0 --dry-run
