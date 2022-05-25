@@ -12,6 +12,7 @@
 - ACI is making use of VXLAN.
 - It makes use of API's
 - CLI doesn't have native access to the controller.
+- ACI and NXOS mode are mutually exclusive.
 
 Tenant -> VRF/Context -> Bridge-Domain -> VLAN
 
@@ -127,4 +128,30 @@ Interface overrides are used to override the interface policies that are applied
 ***VPC Protection Groups***
 
 This helps to identify the pair of switches which are going to be vPC peer's.
-  
+
+- TEP pool which we are using needs to be unique and needs to be part of a separate VRF. 10.0.0.0/16 is the default pool which is used.
+
+IS-IS is the routing protocol which we are using within ACI. This is due to the better scalability capabilities.
+
+Fabric requires a VLAN ID which is 3967 by default.
+
+VLAN ID for the fabric as well as the VTEP Pool range cannot be changed once the fabric is deployed.
+
+***Local Station Table, Global Station Table and Spine Proxy***
+
+**Note**: There are no unknown hosts in ACI fabric.
+
+List of all directly attached hosts on a leaf is called as **Local Station Table**
+
+Spine proxy knows which hosts are connected to specific leaf.
+ie Host1 --> Leaf 1. Spine switches a COOP database.
+
+Global Station Table is present on all leaf switches and contains information about remote hosts. It will have mac address when it's an L2 connections and will have ip addresses when it is a L3 connection.
+
+***Bounce Entries***
+
+ When a host moves from one leaf switch to another, in this case, this information is sent to the spine switch from the new leaf switch. Spine switch will update the COOP database and will send the same information to the old leaf switch. Old leaf switch will remove the existing endpoint entry and add this as a bounce entry pointing towards the new leaf switch.
+
+***Connecting ACI to Outside Networks***
+
+1. Connecting to external routed networks: Border leaf connects ACI fabric to the external world.
