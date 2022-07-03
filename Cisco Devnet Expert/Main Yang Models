@@ -1,0 +1,8 @@
+[IOS XE]
+
+Cisco-IOS-XE-interfaces-oper
+Cisco-IOS-XE-memory-oper
+Cisco-IOS-XE-process-cpu-oper                  
+
+xpath
+/process-cpu-ios-xe-oper:cpu-usage/cpu-utilization/five-seconds

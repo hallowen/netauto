@@ -1,0 +1,66 @@
+Ubuntu Linux: 20.04 LTS
+IOSvL2: 15.2
+IOSv: 15.9
+Cisco Catalyst 8000V: 17.5
+Nexus 9300v (N9Kv): 9.3(8)
+Cisco Application Policy Infrastructure Controller 5.2 w/ ACI Simulator
+
+Software's that are installed on the candidate workstation
+
+Ubuntu 20.04 standard GNOME desktop
+
+Python 3.9
+Ansible 2.9.26
+cisco.aci 2.1
+PyCharm 2021
+Vim 8.1
+Atom 1.58
+Visual Studio Code 1.60
+    Plugins:
+        Docker
+        GitLens – Git supercharged
+        HashiCorp Terraform
+        Python
+        Pylance
+        Remote Development
+        Remote – Containers
+        Remote – SSH
+        YAML
+        Better Jinja
+        Yangster
+        XML Tools
+Firefox
+Google Chrome
+Docker 20.10 + compose plugin v2.2
+Docker-compose 1.29
+Terraform 1.0
+ciscodevnet/aci v0.7
+Git 2.25
+Kubectl 1.23
+telnet
+OpenSSH 8.2
+cURL 7.68
+wget 1.20
+netcat
+Postman 9
+Wireshark 3.2
+OpenSSL 1.1
+Nginx 1.18
+Bash 5.0
+Zsh 5.8
+Tcsh 6.21
+Jq 1.6
+Xmllint
+direnv 2.21
+Cisco Network Services Orchestrator (NSO) local installation 5.5
+Cisco NSO IOS CLI NED 6.69
+Cisco NSO NX-OS CLI NED 5.21
+Cisco YANG Suite 2.8
+GitLab 14
+GitLab Runner 14
+HashiCorp Vault 1.8
+Telegraf 1.19
+InfluxDB 1.8
+Grafana 8.1
+Kubernetes 1.23
+
