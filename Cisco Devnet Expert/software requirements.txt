@@ -58,7 +58,7 @@ Cisco NSO NX-OS CLI NED 5.21
 Cisco YANG Suite 2.8
 GitLab 14
 GitLab Runner 14
-HashiCorp Vault 1.8
+HashiCorp Vault 1.8 <-- Sec 5.4 Blueprint
 Telegraf 1.19
 InfluxDB 1.8
 Grafana 8.1

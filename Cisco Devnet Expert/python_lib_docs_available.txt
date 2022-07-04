@@ -1,0 +1,20 @@
+***Note: Taken from requirements_docs.txt. These are libs for which docs are available on the real lab.
+requests
+pyats
+genie
+scrapli
+netmiko
+paramiko
+scrapli-netconf
+ncclient
+pyang
+textfsm
+flask
+flask-restx
+jinja2
+click
+hvac
+pyyaml
+ruamel.yaml
+lxml
+xmltodict

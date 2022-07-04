@@ -20,5 +20,8 @@
     - APIC Simulator.
     - Always On Sandbox.
     - APIC related plugins.
+- Model Driven Telemetry:
+    - Cat8K
+    - N9K
 
 
